@@ -12,25 +12,25 @@ const Navbar = () => {
   return (
     <div className='bg-transparent top-0 z-50 w-full fixed backdrop-filter backdrop-blur-lg bg-opacity-20 '>
       <div className="flex items-center p-3 text-xl justify-between grotesk-font">
-        <a >Airdrop</a>
+        <a href='/' >Airdrop</a>
         <ul className='flex justify-center space-x-6'>
-          <li>
-            <a
+          <li className=' hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
+            <a href='/'
               className={`menu-item ${activeMenu === 'home' ? 'active' : ''}`}
               onMouseEnter={() => handleMenuClick('home')}
             >
               Home
             </a>
           </li>
-          <li>
-            <a
-              className={`menu-item ${activeMenu === 'search' ? 'active' : ''}`}
-              onMouseEnter={() => handleMenuClick('search')}
+          <li className=' hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
+            <a href='/create'
+              className={`menu-item ${activeMenu === 'Create' ? 'active' : ''}`}
+              onMouseEnter={() => handleMenuClick('Create')}
             >
-              Search
+              Create Airdrop
             </a>
           </li>
-          <li>
+          <li className=' hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
             <a
               className={`menu-item ${activeMenu === 'take' ? 'active' : ''}`}
               onMouseEnter={() => handleMenuClick('take')}
