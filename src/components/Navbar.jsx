@@ -31,17 +31,27 @@ const Navbar = () => {
               activeClassName="active"
               onMouseEnter={() => handleMenuClick('Create')}
             >
-              Create Airdrop
+              Create
             </NavLink>
           </li>
           <li className='hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
             <NavLink
-              to='/news'
+              to='/claim'
               className={`menu-item`}
               activeClassName="active"
-              onMouseEnter={() => handleMenuClick('take')}
+              onMouseEnter={() => handleMenuClick('claim')}
             >
-              News
+              Claim
+            </NavLink>
+          </li>
+          <li className='hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
+            <NavLink
+              to='/clawback'
+              className={`menu-item`}
+              activeClassName="active"
+              onMouseEnter={() => handleMenuClick('clawback')}
+            >
+              Clawback
             </NavLink>
           </li>
         </ul>

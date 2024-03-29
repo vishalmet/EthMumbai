@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import Airdrop from "../assets/airdrop.png";
 
 const CreateAirdrop = () => {
@@ -20,7 +20,7 @@ const CreateAirdrop = () => {
     }));
   };
   return (
-    <div className=" gradient-container grotesk-font">
+    <div className=" gradient-container h-screen grotesk-font">
       <Navbar />
       <div className=" pt-24">
         {/* <p className=" flex justify-center items-center text-3xl lg:text-5xl font-semibold">

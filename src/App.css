@@ -1,6 +1,5 @@
 .gradient-container {
   width: 100vw;
-  height: 100vh;
   background: linear-gradient(-45deg, #000000, #808080, #C0C0C0, #000000);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;

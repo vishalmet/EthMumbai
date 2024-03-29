@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className=' gradient-container grotesk-font'>
+    <div className=' gradient-container h-screen grotesk-font'>
         <Navbar />
         <div className=" pt-24">
           <div className=" pt-[8%]">
