@@ -21,3 +21,8 @@
 .grotesk-font{
   font-family: "Space Grotesk", sans-serif;
 }
+
+.menu-item.active {
+  text-decoration: underline;
+}
+

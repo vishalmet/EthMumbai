@@ -1,46 +1,52 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Connbutton from './Connect';
-// import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
 
   const handleMenuClick = (menu) => {
-    setActiveMenu(activeMenu === menu ? null : menu);
+    setActiveMenu(menu === activeMenu ? null : menu);
   };
 
   return (
-    <div className='bg-transparent top-0 z-50 w-full fixed backdrop-filter backdrop-blur-lg bg-opacity-20 '>
+    <div className='bg-transparent top-0 z-50 w-full fixed backdrop-filter backdrop-blur-lg bg-opacity-20'>
       <div className="flex items-center p-3 text-xl justify-between grotesk-font">
-        <a href='/' >Airdrop</a>
+        <a href='/'>Airdrop</a>
         <ul className='flex justify-center space-x-6'>
-          <li className=' hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
-            <a href='/'
-              className={`menu-item ${activeMenu === 'home' ? 'active' : ''}`}
+          <li className='hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
+            <NavLink
+              to='/'
+              className={`menu-item`}
+              activeClassName="active"
               onMouseEnter={() => handleMenuClick('home')}
             >
               Home
-            </a>
+            </NavLink>
           </li>
-          <li className=' hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
-            <a href='/create'
-              className={`menu-item ${activeMenu === 'Create' ? 'active' : ''}`}
+          <li className='hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
+            <NavLink
+              to='/create'
+              className={`menu-item`}
+              activeClassName="active"
               onMouseEnter={() => handleMenuClick('Create')}
             >
               Create Airdrop
-            </a>
+            </NavLink>
           </li>
-          <li className=' hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
-            <a
-              className={`menu-item ${activeMenu === 'take' ? 'active' : ''}`}
+          <li className='hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
+            <NavLink
+              to='/news'
+              className={`menu-item`}
+              activeClassName="active"
               onMouseEnter={() => handleMenuClick('take')}
             >
               News
-            </a>
+            </NavLink>
           </li>
         </ul>
-        <div className=" grotesk-font">
-        <Connbutton />
+        <div className="grotesk-font">
+          <Connbutton />
         </div>
       </div>
     </div>
