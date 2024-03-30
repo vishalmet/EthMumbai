@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Connbutton from './Connect';
+import Airdrop from '../assets/airdrop.png'
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -12,7 +13,8 @@ const Navbar = () => {
   return (
     <div className='bg-transparent top-0 z-50 w-full fixed backdrop-filter backdrop-blur-lg bg-opacity-20'>
       <div className="flex items-center p-3 text-xl justify-between grotesk-font">
-        <a href='/'>Airdrop</a>
+        {/* <a href='/'>Airdrop</a> */}
+        <NavLink to='/'><img className=' h-12 hover:scale-105 hover:cursor-pointer' src={Airdrop} alt="" /></NavLink>
         <ul className='flex justify-center space-x-6'>
           <li className='hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
             <NavLink
